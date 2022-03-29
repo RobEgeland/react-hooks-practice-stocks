@@ -1,12 +1,12 @@
 import React from "react";
-import Stock from "./Stock";
+import PortfolioStock from "./PortfolioStock";
 
-function PortfolioContainer() {
+function PortfolioContainer({portStocks, filterPortStock}) {
   return (
     <div>
       <h2>My Portfolio</h2>
       {
-        //render your portfolio stocks here
+        portStocks.map((stock) => <PortfolioStock filterPortStock={filterPortStock} id={stock.id} ticker={stock.ticker} name={stock.name} price={stock.price} key={stock.id} />)
       }
     </div>
   );

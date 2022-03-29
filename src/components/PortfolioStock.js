@@ -1,10 +1,10 @@
 import React from "react";
 
-function Stock({handleClick, stock, name, price, ticker}) {
+function PortfolioStock({filterPortStock, stock, name, price, ticker, id}) {
   
   return (
     <div>
-      <div onClick={() => handleClick(stock)} className="card">
+      <div onClick={() => filterPortStock(id)} className="card">
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{ticker}: {price}</p>
@@ -13,4 +13,4 @@ function Stock({handleClick, stock, name, price, ticker}) {
     </div>
   );
 }
-export default Stock;
+export default PortfolioStock;
